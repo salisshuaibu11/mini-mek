@@ -1,6 +1,14 @@
-import { Header, Container, Menu } from "semantic-ui-react";
+import { useState } from "react";
+import { Header, Container } from "semantic-ui-react";
+import TabBarContainer from "./features/tabs/TabBarContainer";
 
 function App() {
+  const [tabs, setTabs] = useState([
+    { name: "unitInfo", label: "Unit Info" },
+    { name: "pilots", label: "Pilots" },
+    { name: "mechs", label: "Mechs" },
+    { name: "unitOrganization", label: "Unit Organization" },
+  ]);
   return (
     <div className="App">
       <div className="App-header">
@@ -9,20 +17,7 @@ function App() {
         </Header>
       </div>
       <Container>
-        <Menu tabular size="massive">
-          <Menu.Item name="unitInfo" active={true}>
-            Unit Info
-          </Menu.Item>
-          <Menu.Item name="pilot" active={false}>
-            Pilots
-          </Menu.Item>
-          <Menu.Item name="mechs" active={false}>
-            Mechs
-          </Menu.Item>
-          <Menu.Item name="unitOrganization" active={false}>
-            Unit Organization
-          </Menu.Item>
-        </Menu>
+        <TabBarContainer tabs={tabs} size="massive" />
       </Container>
     </div>
   );
