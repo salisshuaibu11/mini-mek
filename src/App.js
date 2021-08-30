@@ -1,9 +1,13 @@
-import SampleComponent from "./SampleComponent";
+import { Header } from "semantic-ui-react";
 
 function App() {
   return (
-    <div>
-      <SampleComponent />
+    <div className="App">
+      <div className="App-header">
+        <Header inverted as="h1">
+          Project Mini-Mek
+        </Header>
+      </div>
     </div>
   );
 }
