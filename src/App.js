@@ -1,4 +1,4 @@
-import { Header } from "semantic-ui-react";
+import { Header, Container, Menu } from "semantic-ui-react";
 
 function App() {
   return (
@@ -8,6 +8,22 @@ function App() {
           Project Mini-Mek
         </Header>
       </div>
+      <Container>
+        <Menu tabular size="massive">
+          <Menu.Item name="unitInfo" active={true}>
+            Unit Info
+          </Menu.Item>
+          <Menu.Item name="pilot" active={false}>
+            Pilots
+          </Menu.Item>
+          <Menu.Item name="mechs" active={false}>
+            Mechs
+          </Menu.Item>
+          <Menu.Item name="unitOrganization" active={false}>
+            Unit Organization
+          </Menu.Item>
+        </Menu>
+      </Container>
     </div>
   );
 }
